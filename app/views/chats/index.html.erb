@@ -1,0 +1,14 @@
+<h1>Demo Chat</h1>
+
+<div id="messages">
+  <%= render @messages %>
+</div>
+
+<h2>New message</h2>
+
+<%= form_with url: '#', html: {id: 'new-message'} do |f| %>
+  <%= f.label :body %>
+  <%= f.text_area :body, id: 'message-body' %>
+
+  <%= f.submit %>
+<% end %>
