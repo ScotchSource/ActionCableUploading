@@ -10,5 +10,12 @@
   <%= f.label :body %>
   <%= f.text_area :body, id: 'message-body' %>
 
+  <div class="form-group">
+    <%= f.file_field :attachment, id: 'message-attachment' %>
+    <br>
+    <small>Only PNG, JPG and GIf images are allowed</small>
+  </div>
+
+  <br>
   <%= f.submit %>
 <% end %>

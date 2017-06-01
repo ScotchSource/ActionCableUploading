@@ -3,4 +3,10 @@
   <%= message.body %>
   <br>
   <small>at <%= l message.created_at, format: :short %></small>
+  <% if message.attachment_data? %>
+    <br>
+    <%= link_to "View #{message.attachment.original_filename}",
+                message.attachment.url, target: '_blank' %>
+  <% end %>
+  <hr>
 </div>
